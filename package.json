@@ -8,7 +8,8 @@
     "start": "node src/bot.js",
     "site": "node src/server.js",
     "bot": "node src/bot.js",
-    "commands": "node src/register-commands.js"
+    "commands": "node src/register-commands.js",
+    "build:pages-data": "node scripts/generate-pages-data.js"
   },
   "engines": { "node": ">=20" },
   "dependencies": {

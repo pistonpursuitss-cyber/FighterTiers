@@ -25,6 +25,17 @@ Players must link their Minecraft Java username before joining a queue. Regions 
 No Message Content privileged intent is needed; test results are recorded through the buttons.
 Everyone who should see queues needs **View Channel** access to the channel set by `PANEL_CHANNEL_ID`.
 
-## Website and hosting
+## Free website hosting
 
-The website refreshes rankings and queue state from the shared data file every 10 seconds. This project needs a persistent Node web service because its API and Discord bot share live data; a static GitHub Pages upload alone cannot run them. `render.yaml` configures a Render web service with a persistent data disk. Connect this repository to Render using **New → Blueprint**, then enter `BOT_TOKEN`, `CLIENT_ID`, and `PANEL_CHANNEL_ID` when prompted. Render supplies the public site URL automatically. The persistent disk keeps rankings and queues across deploys. Never commit `.env` or expose the bot token.
+GitHub Pages hosts the public website for free. In the repository, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**. The workflow publishes the `public/` folder at `https://pistonpursuitss-cyber.github.io/FighterTiers/`.
+
+The Discord bot still runs on your computer with `npm start`, so queue and tester features are available while it is running. To sync website rankings from the bot, create a fine-grained GitHub token limited to this repository with **Contents: Read and write**, then put these values in your local `.env`:
+
+```env
+SITE_URL=https://pistonpursuitss-cyber.github.io/FighterTiers
+GITHUB_REPOSITORY=pistonpursuitss-cyber/FighterTiers
+GITHUB_BRANCH=main
+GITHUB_TOKEN=your-token
+```
+
+Keep `.env` private; it is ignored by Git. The bot only uploads a public snapshot of usernames, tiers, points, and queue status. It does not upload Discord IDs, tester lists, or channel IDs. Each snapshot update triggers the Pages workflow. Never put a token in this repository.

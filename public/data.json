@@ -1,0 +1,329 @@
+{
+  "updatedAt": "2026-11-07T06:54:58.355Z",
+  "gameModes": [
+    "Vanilla",
+    "UHC",
+    "Pot",
+    "NethOP",
+    "SMP",
+    "Sword",
+    "Axe",
+    "Mace"
+  ],
+  "regions": [
+    "NA",
+    "EU",
+    "SA",
+    "AU",
+    "ME",
+    "AS",
+    "AF"
+  ],
+  "tiers": [
+    "HT1",
+    "LT1",
+    "HT2",
+    "LT2",
+    "HT3",
+    "LT3",
+    "HT4",
+    "LT4",
+    "HT5",
+    "LT5"
+  ],
+  "players": [
+    {
+      "minecraftUsername": "F15_EAGL3",
+      "tiers": {
+        "Mace": "HT1",
+        "Sword": "HT1"
+      },
+      "peakTiers": {
+        "Mace": "HT1",
+        "Sword": "HT1"
+      },
+      "points": 120,
+      "title": "Combat Ace"
+    }
+  ],
+  "modeRankings": {
+    "Vanilla": [],
+    "UHC": [],
+    "Pot": [],
+    "NethOP": [],
+    "SMP": [],
+    "Sword": [
+      {
+        "minecraftUsername": "F15_EAGL3",
+        "tiers": {
+          "Mace": "HT1",
+          "Sword": "HT1"
+        },
+        "peakTiers": {
+          "Mace": "HT1",
+          "Sword": "HT1"
+        },
+        "points": 120,
+        "title": "Combat Ace"
+      }
+    ],
+    "Axe": [],
+    "Mace": [
+      {
+        "minecraftUsername": "F15_EAGL3",
+        "tiers": {
+          "Mace": "HT1",
+          "Sword": "HT1"
+        },
+        "peakTiers": {
+          "Mace": "HT1",
+          "Sword": "HT1"
+        },
+        "points": 120,
+        "title": "Combat Ace"
+      }
+    ]
+  },
+  "queues": {
+    "Vanilla": {
+      "NA": {
+        "open": false,
+        "count": 0
+      },
+      "EU": {
+        "open": false,
+        "count": 0
+      },
+      "SA": {
+        "open": false,
+        "count": 0
+      },
+      "AU": {
+        "open": false,
+        "count": 0
+      },
+      "ME": {
+        "open": false,
+        "count": 0
+      },
+      "AS": {
+        "open": false,
+        "count": 0
+      },
+      "AF": {
+        "open": false,
+        "count": 0
+      }
+    },
+    "UHC": {
+      "NA": {
+        "open": false,
+        "count": 0
+      },
+      "EU": {
+        "open": false,
+        "count": 0
+      },
+      "SA": {
+        "open": false,
+        "count": 0
+      },
+      "AU": {
+        "open": false,
+        "count": 0
+      },
+      "ME": {
+        "open": false,
+        "count": 0
+      },
+      "AS": {
+        "open": false,
+        "count": 0
+      },
+      "AF": {
+        "open": false,
+        "count": 0
+      }
+    },
+    "Pot": {
+      "NA": {
+        "open": false,
+        "count": 0
+      },
+      "EU": {
+        "open": false,
+        "count": 0
+      },
+      "SA": {
+        "open": false,
+        "count": 0
+      },
+      "AU": {
+        "open": false,
+        "count": 0
+      },
+      "ME": {
+        "open": false,
+        "count": 0
+      },
+      "AS": {
+        "open": false,
+        "count": 0
+      },
+      "AF": {
+        "open": false,
+        "count": 0
+      }
+    },
+    "NethOP": {
+      "NA": {
+        "open": false,
+        "count": 0
+      },
+      "EU": {
+        "open": false,
+        "count": 0
+      },
+      "SA": {
+        "open": false,
+        "count": 0
+      },
+      "AU": {
+        "open": false,
+        "count": 0
+      },
+      "ME": {
+        "open": false,
+        "count": 0
+      },
+      "AS": {
+        "open": false,
+        "count": 0
+      },
+      "AF": {
+        "open": false,
+        "count": 0
+      }
+    },
+    "SMP": {
+      "NA": {
+        "open": false,
+        "count": 0
+      },
+      "EU": {
+        "open": false,
+        "count": 0
+      },
+      "SA": {
+        "open": false,
+        "count": 0
+      },
+      "AU": {
+        "open": false,
+        "count": 0
+      },
+      "ME": {
+        "open": false,
+        "count": 0
+      },
+      "AS": {
+        "open": false,
+        "count": 0
+      },
+      "AF": {
+        "open": false,
+        "count": 0
+      }
+    },
+    "Sword": {
+      "NA": {
+        "open": true,
+        "count": 0
+      },
+      "EU": {
+        "open": false,
+        "count": 0
+      },
+      "SA": {
+        "open": false,
+        "count": 0
+      },
+      "AU": {
+        "open": false,
+        "count": 0
+      },
+      "ME": {
+        "open": false,
+        "count": 0
+      },
+      "AS": {
+        "open": false,
+        "count": 0
+      },
+      "AF": {
+        "open": false,
+        "count": 0
+      }
+    },
+    "Axe": {
+      "NA": {
+        "open": false,
+        "count": 0
+      },
+      "EU": {
+        "open": false,
+        "count": 0
+      },
+      "SA": {
+        "open": false,
+        "count": 0
+      },
+      "AU": {
+        "open": false,
+        "count": 0
+      },
+      "ME": {
+        "open": false,
+        "count": 0
+      },
+      "AS": {
+        "open": false,
+        "count": 0
+      },
+      "AF": {
+        "open": false,
+        "count": 0
+      }
+    },
+    "Mace": {
+      "NA": {
+        "open": true,
+        "count": 0
+      },
+      "EU": {
+        "open": false,
+        "count": 0
+      },
+      "SA": {
+        "open": false,
+        "count": 0
+      },
+      "AU": {
+        "open": false,
+        "count": 0
+      },
+      "ME": {
+        "open": false,
+        "count": 0
+      },
+      "AS": {
+        "open": false,
+        "count": 0
+      },
+      "AF": {
+        "open": false,
+        "count": 0
+      }
+    }
+  }
+}

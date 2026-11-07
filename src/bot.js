@@ -14,7 +14,7 @@ if (!token) throw new Error('Set BOT_TOKEN in your environment before starting t
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
 const siteUrl = (process.env.SITE_URL || (process.env.RENDER_EXTERNAL_HOSTNAME
   ? `https://${process.env.RENDER_EXTERNAL_HOSTNAME}`
-  : 'http://localhost:3000')).replace(/\/$/, '');
+  : 'https://pistonpursuitss-cyber.github.io/FighterTiers')).replace(/\/$/, '');
 
 function button(id, label, style = ButtonStyle.Secondary, emoji) {
   const item = new ButtonBuilder().setCustomId(id).setLabel(label).setStyle(style);

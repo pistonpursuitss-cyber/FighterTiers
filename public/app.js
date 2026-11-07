@@ -157,7 +157,7 @@ function setView(view) {
 
 async function load() {
   try {
-    const response = await fetch('/api/fighters');
+    const response = await fetch(`./data.json?updated=${Date.now()}`, { cache: 'no-store' });
     if (!response.ok) throw new Error('Rankings are temporarily unavailable. Refresh to try again.');
     const data = await response.json();
     rankings = data;
