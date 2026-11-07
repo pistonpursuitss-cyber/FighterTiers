@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11120f">
+  <meta name="description" content="Minecraft PvP tiers, regional tier-test queues, player profiles, and overall rankings from Fighter Tiers.">
+  <title>Fighter Tiers — Minecraft PvP Rankings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#top" aria-label="Fighter Tiers home"><span class="brand-mark">FT</span><span>FIGHTER<span class="gold">TIERS</span></span></a><nav><a href="#rankings">Rankings</a><a href="#queues">Queues</a><a href="#about">About</a><a class="nav-cta" href="https://discord.gg/brWV5DMQSB">Join our Discord <span>↗</span></a></nav></header>
+  <main id="top">
+    <section class="hero"><div class="hero-copy"><p class="eyebrow"><span class="live-dot"></span> MINECRAFT PVP · PLAYER RANKINGS</p><h1>THE RANKINGS.<br><span>SETTLED.</span></h1><p class="hero-text">Eight gamemodes. HT1 to LT5. Tier tests and one overall player leaderboard.</p><a class="primary-button" href="#rankings">Explore the rankings <span>↓</span></a></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="crest"><span>FT</span><i></i><small>RANKED BY THE COMMUNITY</small></div><div class="art-label label-top">PVP <b>TIERS</b></div><div class="art-label label-bottom">TEST. TIER. CLIMB.</div></div><span class="fly-plane plane-one" aria-hidden="true">✈</span><span class="fly-plane plane-two" aria-hidden="true">✈</span><span class="fly-plane plane-three" aria-hidden="true">✈</span><div class="hero-index">01 / THE INDEX</div></section>
+    <section class="rankings section-wrap" id="rankings"><div class="section-heading"><div><p class="eyebrow">MINECRAFT PVP · PLAYER TIERS</p><h2>OVERALL <span>LEADERBOARD</span></h2></div><div class="rank-controls"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Find a Minecraft player..." autocomplete="off"></label><select id="mode-filter" aria-label="Filter by gamemode"><option value="overall">Overall leaderboard</option></select></div></div><div class="stats"><div><span class="stat-number" id="fighter-count">—</span><span class="stat-label">PLAYERS RANKED</span></div><div><span class="stat-number" id="division-count">—</span><span class="stat-label">PVP GAMEMODES</span></div><div><span class="stat-number">HT1 → LT5</span><span class="stat-label">TIER SCALE</span></div><p class="updated" id="updated">Loading rankings…</p></div><div class="view-switch" role="group" aria-label="Rankings view"><button id="board-view" class="view-button active" aria-pressed="true">Tier board</button><button id="list-view" class="view-button" aria-pressed="false">Leaderboard</button></div><div id="tier-board" class="tier-board"><p class="empty">Loading the rankings…</p></div><div id="list-board" class="table-wrap" hidden><table><thead><tr><th>RANK</th><th>MINECRAFT PLAYER</th><th>TITLE</th><th>POINTS</th><th>GAMEMODE TIERS</th></tr></thead><tbody id="players"></tbody></table></div><p id="error" class="error" hidden></p></section>
+    <section class="queue-section section-wrap" id="queues"><div class="section-heading"><div><p class="eyebrow">TIER TESTS</p><h2>REGIONAL <span>QUEUES</span></h2></div><span class="queue-hint">Choose a gamemode and region in Discord</span></div><div class="queue-groups" id="queue-grid"><p class="empty">Loading queues…</p></div></section>
+    <section class="discord-band" id="about"><div class="discord-icon">✦</div><div><p class="eyebrow">YOUR SERVER. YOUR RANKINGS.</p><h2>TAKE THE DEBATE <span>TO DISCORD.</span></h2><p>Pull up the current list or look up a fighter without leaving the conversation.</p></div><a class="secondary-button" href="https://discord.gg/brWV5DMQSB">Join our Discord <span>↗</span></a></section>
+  </main><footer><a class="brand" href="#top"><span class="brand-mark">FT</span><span>FIGHTER<span class="gold">TIERS</span></span></a><span>Built for the fight game. Ranked by the community.</span><a href="https://discord.gg/brWV5DMQSB">JOIN DISCORD ↗</a><a href="#top">BACK TO TOP ↑</a></footer>
+</body>
+</html>

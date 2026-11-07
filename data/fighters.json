@@ -1,0 +1,91 @@
+{
+  "updatedAt": "2026-11-07T06:54:58.355Z",
+  "fighters": [
+    {
+      "name": "<@1195422409247948920>",
+      "division": "mace",
+      "tier": "HT1",
+      "record": "",
+      "rank": 1
+    }
+  ],
+  "gameModes": [
+    "Vanilla",
+    "UHC",
+    "Pot",
+    "NethOP",
+    "SMP",
+    "Sword",
+    "Axe",
+    "Mace"
+  ],
+  "regions": [
+    "NA",
+    "EU",
+    "SA",
+    "AU",
+    "ME",
+    "AS",
+    "AF"
+  ],
+  "players": [
+    {
+      "discordId": "1509783348766048297",
+      "minecraftUsername": "F15_EAGL3",
+      "tiers": {
+        "Mace": "HT1",
+        "Sword": "HT1"
+      },
+      "peakTiers": {
+        "Mace": "HT1",
+        "Sword": "HT1"
+      }
+    }
+  ],
+  "queuesOpen": false,
+  "queues": {
+    "solo-1v1": {
+      "open": true,
+      "users": [],
+      "currentPlayer": "1509783348766048297"
+    },
+    "mace~na": {
+      "open": true,
+      "users": [],
+      "currentPlayer": "1509783348766048297",
+      "panel": {
+        "channelId": "1510340695292907650",
+        "messageId": "1568512690249400363"
+      }
+    },
+    "sword~na": {
+      "open": true,
+      "users": [],
+      "panel": {
+        "channelId": "1510340695292907650",
+        "messageId": "1568517364834631732"
+      },
+      "currentPlayer": null
+    }
+  },
+  "testers": {
+    "1509785340087636038": [
+      "1195422409247948920"
+    ]
+  },
+  "panels": {
+    "1510340695292907650": {
+      "messageId": "1568512689498620056"
+    }
+  },
+  "resultChannels": {
+    "Vanilla": "1568517209775415306",
+    "UHC": "1568517210136256545",
+    "Pot": "1568517211621167125",
+    "NethOP": "1568517212460027914",
+    "SMP": "1568517213495763007",
+    "Sword": "1568517224644218892",
+    "Axe": "1568517226028601547",
+    "Mace": "1568517227521638460"
+  }
+}
