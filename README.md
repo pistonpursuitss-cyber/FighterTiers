@@ -13,7 +13,7 @@ Fighter Tiers is a Minecraft PvP tier-list website and button-driven Discord bot
 ## Button flows
 
 - **Link Minecraft** — opens a username form.
-- **Join a tier test** — choose one of Vanilla, UHC, Pot, NethOP, SMP, Sword, Axe, or Mace, then a region. Join or leave the queue with buttons.
+- **Join a tier test** — choose Rocket Mace, Spear Mace, Diamond Pot, Netherite Pot, SMP, UHC, Axe, Crystal, Sword, or Mace, then a region. Join or leave the queue with buttons.
 - **Browse tiers** — show a mode-specific tier board or the overall leaderboard.
 - **My profile** — search a Minecraft username.
 - **Tester tools** — opening a regional queue publishes a shared live queue card in the configured panel channel. Testers can close it, call the next player, and assign a result from HT1 to LT5.

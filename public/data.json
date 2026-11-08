@@ -1,13 +1,15 @@
 {
   "updatedAt": "2026-11-08T05:07:57.744Z",
   "gameModes": [
-    "Vanilla",
-    "UHC",
-    "Pot",
-    "NethOP",
+    "Rocket Mace",
+    "Spear Mace",
+    "Diamond Pot",
+    "Netherite Pot",
     "SMP",
-    "Sword",
+    "UHC",
     "Axe",
+    "Crystal",
+    "Sword",
     "Mace"
   ],
   "regions": [
@@ -47,11 +49,14 @@
     }
   ],
   "modeRankings": {
-    "Vanilla": [],
-    "UHC": [],
-    "Pot": [],
-    "NethOP": [],
+    "Rocket Mace": [],
+    "Spear Mace": [],
+    "Diamond Pot": [],
+    "Netherite Pot": [],
     "SMP": [],
+    "UHC": [],
+    "Axe": [],
+    "Crystal": [],
     "Sword": [
       {
         "minecraftUsername": "F15_EAGL3",
@@ -67,7 +72,6 @@
         "title": "Combat Ace"
       }
     ],
-    "Axe": [],
     "Mace": [
       {
         "minecraftUsername": "F15_EAGL3",
@@ -85,7 +89,7 @@
     ]
   },
   "queues": {
-    "Vanilla": {
+    "Rocket Mace": {
       "NA": {
         "open": false,
         "count": 0
@@ -115,7 +119,7 @@
         "count": 0
       }
     },
-    "UHC": {
+    "Spear Mace": {
       "NA": {
         "open": false,
         "count": 0
@@ -145,7 +149,7 @@
         "count": 0
       }
     },
-    "Pot": {
+    "Diamond Pot": {
       "NA": {
         "open": false,
         "count": 0
@@ -175,7 +179,7 @@
         "count": 0
       }
     },
-    "NethOP": {
+    "Netherite Pot": {
       "NA": {
         "open": false,
         "count": 0
@@ -235,9 +239,9 @@
         "count": 0
       }
     },
-    "Sword": {
+    "UHC": {
       "NA": {
-        "open": true,
+        "open": false,
         "count": 0
       },
       "EU": {
@@ -268,6 +272,66 @@
     "Axe": {
       "NA": {
         "open": false,
+        "count": 0
+      },
+      "EU": {
+        "open": false,
+        "count": 0
+      },
+      "SA": {
+        "open": false,
+        "count": 0
+      },
+      "AU": {
+        "open": false,
+        "count": 0
+      },
+      "ME": {
+        "open": false,
+        "count": 0
+      },
+      "AS": {
+        "open": false,
+        "count": 0
+      },
+      "AF": {
+        "open": false,
+        "count": 0
+      }
+    },
+    "Crystal": {
+      "NA": {
+        "open": false,
+        "count": 0
+      },
+      "EU": {
+        "open": false,
+        "count": 0
+      },
+      "SA": {
+        "open": false,
+        "count": 0
+      },
+      "AU": {
+        "open": false,
+        "count": 0
+      },
+      "ME": {
+        "open": false,
+        "count": 0
+      },
+      "AS": {
+        "open": false,
+        "count": 0
+      },
+      "AF": {
+        "open": false,
+        "count": 0
+      }
+    },
+    "Sword": {
+      "NA": {
+        "open": true,
         "count": 0
       },
       "EU": {

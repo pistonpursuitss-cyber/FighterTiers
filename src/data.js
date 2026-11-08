@@ -8,7 +8,7 @@ const dataPath = process.env.FIGHTERS_DATA_PATH ? path.resolve(process.env.FIGHT
 const publicDataPath = fileURLToPath(new URL('../public/data.json', import.meta.url));
 let githubPublishQueue = Promise.resolve();
 
-export const GAME_MODES = ['Vanilla', 'UHC', 'Pot', 'NethOP', 'SMP', 'Sword', 'Axe', 'Mace'];
+export const GAME_MODES = ['Rocket Mace', 'Spear Mace', 'Diamond Pot', 'Netherite Pot', 'SMP', 'UHC', 'Axe', 'Crystal', 'Sword', 'Mace'];
 export const REGIONS = ['NA', 'EU', 'SA', 'AU', 'ME', 'AS', 'AF'];
 export const TIERS = ['HT1', 'LT1', 'HT2', 'LT2', 'HT3', 'LT3', 'HT4', 'LT4', 'HT5', 'LT5'];
 export const TIER_POINTS = { HT1: 60, LT1: 45, HT2: 30, LT2: 20, HT3: 10, LT3: 6, HT4: 4, LT4: 3, HT5: 2, LT5: 1 };
@@ -117,8 +117,14 @@ function queueGitHubPublish(content) {
     };
     const current = await fetch(`${endpoint}?ref=${encodeURIComponent(branch)}`, { headers });
     let sha;
-    if (current.ok) sha = (await current.json()).sha;
-    else if (current.status !== 404) throw new Error(`GitHub read returned HTTP ${current.status}`);
+    if (current.ok) {
+      const currentFile = await current.json();
+      sha = currentFile.sha;
+      const remoteContent = Buffer.from(currentFile.content.replace(/\s/g, ''), 'base64').toString('utf8');
+      if (remoteContent === content) return;
+    } else if (current.status !== 404) {
+      throw new Error(`GitHub read returned HTTP ${current.status}`);
+    }
 
     const response = await fetch(endpoint, {
       method: 'PUT',

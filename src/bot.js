@@ -45,7 +45,7 @@ function regionButtons(prefix, backId) {
 function panelPayload() {
   const embed = new EmbedBuilder().setColor(0xd6a84f)
     .setTitle('⚔ Fighter Tiers · Minecraft PvP')
-    .setDescription('Link your Minecraft account, join a regional tier-test queue, browse the rankings, or open your player profile.\n\n**Gamemodes:** Vanilla · UHC · Pot · NethOP · SMP · Sword · Axe · Mace\n**Tier scale:** HT1 → LT5')
+    .setDescription('Link your Minecraft account, join a regional tier-test queue, browse the rankings, or open your player profile.\n\n**Gamemodes:** Rocket Mace · Spear Mace · Diamond Pot · Netherite Pot · SMP · UHC · Axe · Crystal · Sword · Mace\n**Tier scale:** HT1 → LT5')
     .addFields({ name: 'START HERE', value: 'Use **Link Minecraft** once, then choose **Join a tier test**.' })
     .setURL(siteUrl).setFooter({ text: 'Fighter Tiers · Button controls' });
   return {
