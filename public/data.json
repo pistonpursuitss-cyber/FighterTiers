@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T05:00:14.237Z",
+  "updatedAt": "2026-11-08T05:01:00.210Z",
   "gameModes": [
     "Vanilla",
     "UHC",
@@ -298,7 +298,7 @@
     "Mace": {
       "NA": {
         "open": true,
-        "count": 0
+        "count": 1
       },
       "EU": {
         "open": false,
