@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T05:01:10.894Z",
+  "updatedAt": "2026-11-08T05:02:43.595Z",
   "gameModes": [
     "Vanilla",
     "UHC",
@@ -35,7 +35,7 @@
     {
       "minecraftUsername": "F15_EAGL3",
       "tiers": {
-        "Mace": "LT1",
+        "Mace": "LT3",
         "Sword": "HT1"
       },
       "peakTiers": {
@@ -56,7 +56,7 @@
       {
         "minecraftUsername": "F15_EAGL3",
         "tiers": {
-          "Mace": "LT1",
+          "Mace": "LT3",
           "Sword": "HT1"
         },
         "peakTiers": {
@@ -72,7 +72,7 @@
       {
         "minecraftUsername": "F15_EAGL3",
         "tiers": {
-          "Mace": "LT1",
+          "Mace": "LT3",
           "Sword": "HT1"
         },
         "peakTiers": {
