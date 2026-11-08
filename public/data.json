@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T07:49:26.236Z",
+  "updatedAt": "2026-11-08T08:26:09.459Z",
   "gameModes": [
     "Rocket Mace",
     "Spear Mace",
@@ -58,7 +58,7 @@
     "Rocket Mace": {
       "NA": {
         "open": true,
-        "count": 0
+        "count": 1
       },
       "EU": {
         "open": false,
