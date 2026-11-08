@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T05:13:44.423Z",
+  "updatedAt": "2026-11-08T05:13:49.662Z",
   "gameModes": [
     "Rocket Mace",
     "Spear Mace",
@@ -38,18 +38,36 @@
       "minecraftUsername": "F15_EAGL3",
       "tiers": {
         "Mace": "LT3",
-        "Sword": "HT1"
+        "Sword": "HT1",
+        "Rocket Mace": "HT1"
       },
       "peakTiers": {
         "Mace": "HT1",
-        "Sword": "HT1"
+        "Sword": "HT1",
+        "Rocket Mace": "HT1"
       },
-      "points": 120,
+      "points": 180,
       "title": "Combat Ace"
     }
   ],
   "modeRankings": {
-    "Rocket Mace": [],
+    "Rocket Mace": [
+      {
+        "minecraftUsername": "F15_EAGL3",
+        "tiers": {
+          "Mace": "LT3",
+          "Sword": "HT1",
+          "Rocket Mace": "HT1"
+        },
+        "peakTiers": {
+          "Mace": "HT1",
+          "Sword": "HT1",
+          "Rocket Mace": "HT1"
+        },
+        "points": 180,
+        "title": "Combat Ace"
+      }
+    ],
     "Spear Mace": [],
     "Diamond Pot": [],
     "Netherite Pot": [],
@@ -62,13 +80,15 @@
         "minecraftUsername": "F15_EAGL3",
         "tiers": {
           "Mace": "LT3",
-          "Sword": "HT1"
+          "Sword": "HT1",
+          "Rocket Mace": "HT1"
         },
         "peakTiers": {
           "Mace": "HT1",
-          "Sword": "HT1"
+          "Sword": "HT1",
+          "Rocket Mace": "HT1"
         },
-        "points": 120,
+        "points": 180,
         "title": "Combat Ace"
       }
     ],
@@ -77,13 +97,15 @@
         "minecraftUsername": "F15_EAGL3",
         "tiers": {
           "Mace": "LT3",
-          "Sword": "HT1"
+          "Sword": "HT1",
+          "Rocket Mace": "HT1"
         },
         "peakTiers": {
           "Mace": "HT1",
-          "Sword": "HT1"
+          "Sword": "HT1",
+          "Rocket Mace": "HT1"
         },
-        "points": 120,
+        "points": 180,
         "title": "Combat Ace"
       }
     ]
