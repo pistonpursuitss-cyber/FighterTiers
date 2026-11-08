@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T07:48:46.626Z",
+  "updatedAt": "2026-11-08T07:49:26.236Z",
   "gameModes": [
     "Rocket Mace",
     "Spear Mace",
@@ -36,14 +36,10 @@
   "players": [
     {
       "minecraftUsername": "F15_EAGL3",
-      "tiers": {
-        "Mace": "LT3"
-      },
-      "peakTiers": {
-        "Mace": "HT1"
-      },
-      "points": 60,
-      "title": "Combat Specialist"
+      "tiers": {},
+      "peakTiers": {},
+      "points": 0,
+      "title": "Rookie"
     }
   ],
   "modeRankings": {
@@ -56,19 +52,7 @@
     "Axe": [],
     "Crystal": [],
     "Sword": [],
-    "Mace": [
-      {
-        "minecraftUsername": "F15_EAGL3",
-        "tiers": {
-          "Mace": "LT3"
-        },
-        "peakTiers": {
-          "Mace": "HT1"
-        },
-        "points": 60,
-        "title": "Combat Specialist"
-      }
-    ]
+    "Mace": []
   },
   "queues": {
     "Rocket Mace": {
