@@ -17,6 +17,7 @@ Fighter Tiers is a Minecraft PvP tier-list website and button-driven Discord bot
 - **Browse tiers** — show a mode-specific tier board or the overall leaderboard.
 - **My profile** — search a Minecraft username.
 - **Tester tools** — opening a regional queue publishes a shared live queue card in the configured panel channel. Testers can close it, call the next player, and assign a result from HT1 to LT5.
+- **Remove a tier** — testers can choose a gamemode and Minecraft username, review the current tier, and confirm removal. This clears that gamemode’s current and peak tier, updates overall points and the website, and logs the change in the gamemode results channel.
 - **Private test rooms** — when a tester selects **Next in queue**, the bot creates a private channel for that player and the assigned tester. The assigned tester records the result using the tier buttons. The result updates the website and is posted in that gamemode’s `results-*` channel. The private test room is deleted 10 seconds after completion; results channels are kept.
 - **Manage testers** — add, remove, or list testers using buttons; server owner or Manage Server permission required.
 

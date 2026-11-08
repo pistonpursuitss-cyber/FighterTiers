@@ -228,6 +228,21 @@ function tierChoiceButtons(mode) {
   ];
 }
 
+function testerHomeComponents() {
+  return [
+    ...modeButtons('flow:tester-mode', 'panel:home'),
+    new ActionRowBuilder().addComponents(button('tester:remove-mode', 'Remove a player’s tier', ButtonStyle.Danger, '🗑️'))
+  ];
+}
+
+function removeTierModal(mode) {
+  return new ModalBuilder().setCustomId(`modal:remove-tier:${modeKey(mode)}`).setTitle(`Remove a tier · ${mode}`)
+    .addComponents(new ActionRowBuilder().addComponents(
+      new TextInputBuilder().setCustomId('username').setLabel('Minecraft username').setPlaceholder('Player whose tier to remove')
+        .setMinLength(3).setMaxLength(16).setStyle(TextInputStyle.Short).setRequired(true)
+    ));
+}
+
 function linkModal() {
   return new ModalBuilder().setCustomId('modal:link').setTitle('Link Minecraft account')
     .addComponents(new ActionRowBuilder().addComponents(
@@ -318,7 +333,7 @@ async function handleButton(interaction) {
       .addComponents(new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId('username').setLabel('Minecraft username').setMinLength(3).setMaxLength(16).setStyle(TextInputStyle.Short).setRequired(true))));
     if (action === 'tester') {
       if (!await isTester(interaction)) return interaction.reply({ content: 'Tester tools are only available to configured testers.', ephemeral: true });
-      return interaction.reply({ content: 'Choose a gamemode for tester controls:', components: modeButtons('flow:tester-mode', 'panel:home'), ephemeral: true });
+      return interaction.reply({ content: 'Choose a gamemode for tester controls, or remove a player’s tier:', components: testerHomeComponents(), ephemeral: true });
     }
     if (action === 'manage-testers') {
       if (!isGuildOwner(interaction)) return interaction.reply({ content: 'Only the server owner or a member with Manage Server permission can manage testers.', ephemeral: true });
@@ -347,6 +362,12 @@ async function handleButton(interaction) {
     const mode = GAME_MODES.find(value => modeKey(value) === arg1);
     if (!mode) return interaction.reply({ content: 'Unknown gamemode.', ephemeral: true });
     return interaction.update({ content: `Choose the region for **${mode}**:`, components: regionButtons(`flow:tester-region:${modeKey(mode)}`, 'panel:tester') });
+  }
+  if (scope === 'flow' && action === 'remove-tier-mode') {
+    if (!await isTester(interaction)) return interaction.reply({ content: 'Only configured testers can remove tiers.', ephemeral: true });
+    const mode = GAME_MODES.find(value => modeKey(value) === arg1);
+    if (!mode) return interaction.reply({ content: 'Unknown gamemode.', ephemeral: true });
+    return interaction.showModal(removeTierModal(mode));
   }
   if (scope === 'flow' && action === 'tester-region') {
     if (!await isTester(interaction)) return interaction.reply({ content: 'Tester tools are only available to configured testers.', ephemeral: true });
@@ -423,6 +444,10 @@ async function handleButton(interaction) {
     if (!mode) return interaction.reply({ content: 'Unknown gamemode.', ephemeral: true });
     return interaction.update({ content: `Choose the test result for **${mode}**:`, components: tierChoiceButtons(mode) });
   }
+  if (scope === 'tester' && action === 'remove-mode') {
+    if (!await isTester(interaction)) return interaction.reply({ content: 'Only configured testers can remove tiers.', ephemeral: true });
+    return interaction.update({ content: 'Choose the gamemode whose tier you want to remove:', components: modeButtons('flow:remove-tier-mode', 'flow:tester') });
+  }
   if (scope === 'tester' && action === 'tier') {
     if (!await isTester(interaction)) return interaction.reply({ content: 'Only testers can assign tiers.', ephemeral: true });
     const mode = GAME_MODES.find(value => modeKey(value) === arg1);
@@ -441,9 +466,37 @@ async function handleButton(interaction) {
     return interaction.showModal(testerManageModal(action));
   }
 
+  if (scope === 'tierremove') {
+    if (!await isTester(interaction)) return interaction.reply({ content: 'Only configured testers can remove tiers.', ephemeral: true });
+    if (action === 'cancel') return interaction.update({ content: 'Tier removal canceled.', components: [] });
+    if (action !== 'confirm') return;
+    const mode = GAME_MODES.find(value => modeKey(value) === arg1);
+    const data = await getRankings();
+    const player = data.players.find(entry => normalize(entry.minecraftUsername) === normalize(arg2));
+    const removedTier = player?.tiers?.[mode];
+    if (!mode || !player || !removedTier) return interaction.update({ content: 'That player no longer has a tier in this gamemode.', components: [] });
+    delete player.tiers[mode];
+    if (player.peakTiers) delete player.peakTiers[mode];
+    data.updatedAt = new Date().toISOString();
+    await saveRankings(data);
+    const resultChannelId = data.resultChannels?.[mode];
+    if (resultChannelId) {
+      try {
+        const resultChannel = await interaction.guild.channels.fetch(resultChannelId);
+        await resultChannel.send({ embeds: [new EmbedBuilder().setColor(0xc94c4c)
+          .setTitle(`Tier removed · ${mode}`)
+          .setDescription(`Removed **${removedTier}** from **${player.minecraftUsername}**.\n**Removed by:** <@${interaction.user.id}>`)
+          .setURL(siteUrl).setFooter({ text: 'Fighter Tiers · Tier change log' })] });
+      } catch (error) {
+        console.error(`Could not log the ${mode} tier removal:`, error);
+      }
+    }
+    return interaction.update({ content: `Removed **${removedTier} · ${mode}** from **${player.minecraftUsername}**. Their website ranking and overall points are updated.`, components: [] });
+  }
+
   if (scope === 'flow' && action === 'tester') {
     if (!await isTester(interaction)) return interaction.reply({ content: 'Tester tools are only available to configured testers.', ephemeral: true });
-    return interaction.update({ content: 'Choose a gamemode for tester controls:', components: modeButtons('flow:tester-mode', 'panel:home') });
+    return interaction.update({ content: 'Choose a gamemode for tester controls, or remove a player’s tier:', components: testerHomeComponents() });
   }
   if (scope === 'flow' && action === 'queue') {
     return interaction.update({ content: 'Choose a Minecraft PvP gamemode:', components: modeButtons('flow:queue-mode', 'panel:home') });
@@ -474,6 +527,20 @@ async function handleModal(interaction) {
     const player = data.players.find(entry => normalize(entry.minecraftUsername) === normalize(username));
     if (!player) return interaction.reply({ content: `No profile found for **${username}**.`, ephemeral: true });
     return interaction.reply({ embeds: [profileEmbed(player)], ephemeral: true });
+  }
+  if (scope === 'modal' && action === 'remove-tier') {
+    if (!await isTester(interaction)) return interaction.reply({ content: 'Only configured testers can remove tiers.', ephemeral: true });
+    const mode = GAME_MODES.find(value => modeKey(value) === modeSlug);
+    const username = interaction.fields.getTextInputValue('username').trim();
+    if (!mode || !/^[A-Za-z0-9_]{3,16}$/.test(username)) return interaction.reply({ content: 'Check the Minecraft username and gamemode.', ephemeral: true });
+    const player = data.players.find(entry => normalize(entry.minecraftUsername) === normalize(username));
+    const tier = player?.tiers?.[mode];
+    if (!player) return interaction.reply({ content: `No profile found for **${username}**.`, ephemeral: true });
+    if (!tier) return interaction.reply({ content: `**${player.minecraftUsername}** has no tier in **${mode}**.`, ephemeral: true });
+    return interaction.reply({ content: `Remove **${tier} · ${mode}** from **${player.minecraftUsername}**? This will update their profile and overall points.`, components: [new ActionRowBuilder().addComponents(
+      button(`tierremove:confirm:${modeKey(mode)}:${player.minecraftUsername}`, 'Confirm removal', ButtonStyle.Danger, '🗑️'),
+      button('tierremove:cancel', 'Cancel', ButtonStyle.Secondary, '↩️')
+    )], ephemeral: true });
   }
   if (scope === 'modal' && action === 'tier') {
     if (!await isTester(interaction)) return interaction.reply({ content: 'Only testers can assign tiers.', ephemeral: true });
