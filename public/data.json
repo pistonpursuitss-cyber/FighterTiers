@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T07:47:58.859Z",
+  "updatedAt": "2026-11-08T07:48:46.626Z",
   "gameModes": [
     "Rocket Mace",
     "Spear Mace",
@@ -37,15 +37,13 @@
     {
       "minecraftUsername": "F15_EAGL3",
       "tiers": {
-        "Mace": "LT3",
-        "Sword": "HT1"
+        "Mace": "LT3"
       },
       "peakTiers": {
-        "Mace": "HT1",
-        "Sword": "HT1"
+        "Mace": "HT1"
       },
-      "points": 120,
-      "title": "Combat Ace"
+      "points": 60,
+      "title": "Combat Specialist"
     }
   ],
   "modeRankings": {
@@ -57,34 +55,18 @@
     "UHC": [],
     "Axe": [],
     "Crystal": [],
-    "Sword": [
-      {
-        "minecraftUsername": "F15_EAGL3",
-        "tiers": {
-          "Mace": "LT3",
-          "Sword": "HT1"
-        },
-        "peakTiers": {
-          "Mace": "HT1",
-          "Sword": "HT1"
-        },
-        "points": 120,
-        "title": "Combat Ace"
-      }
-    ],
+    "Sword": [],
     "Mace": [
       {
         "minecraftUsername": "F15_EAGL3",
         "tiers": {
-          "Mace": "LT3",
-          "Sword": "HT1"
+          "Mace": "LT3"
         },
         "peakTiers": {
-          "Mace": "HT1",
-          "Sword": "HT1"
+          "Mace": "HT1"
         },
-        "points": 120,
-        "title": "Combat Ace"
+        "points": 60,
+        "title": "Combat Specialist"
       }
     ]
   },
