@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T09:28:02.308Z",
+  "updatedAt": "2026-11-18T23:35:54.363Z",
   "gameModes": [
     "Rocket Mace",
     "Spear Mace",
@@ -37,13 +37,13 @@
     {
       "minecraftUsername": "F15_EAGL3",
       "tiers": {
-        "Mace": "LT3"
+        "Mace": "HT3"
       },
       "peakTiers": {
-        "Mace": "LT3"
+        "Mace": "HT3"
       },
-      "points": 6,
-      "title": "Rookie"
+      "points": 10,
+      "title": "Combat Novice"
     }
   ],
   "modeRankings": {
@@ -60,13 +60,13 @@
       {
         "minecraftUsername": "F15_EAGL3",
         "tiers": {
-          "Mace": "LT3"
+          "Mace": "HT3"
         },
         "peakTiers": {
-          "Mace": "LT3"
+          "Mace": "HT3"
         },
-        "points": 6,
-        "title": "Rookie"
+        "points": 10,
+        "title": "Combat Novice"
       }
     ]
   },
