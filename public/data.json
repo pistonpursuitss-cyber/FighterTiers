@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T23:35:54.363Z",
+  "updatedAt": "2026-11-18T23:38:20.944Z",
   "gameModes": [
     "Rocket Mace",
     "Spear Mace",
@@ -37,17 +37,33 @@
     {
       "minecraftUsername": "F15_EAGL3",
       "tiers": {
-        "Mace": "HT3"
+        "Mace": "HT3",
+        "Rocket Mace": "LT2"
       },
       "peakTiers": {
-        "Mace": "HT3"
+        "Mace": "HT3",
+        "Rocket Mace": "LT2"
       },
-      "points": 10,
-      "title": "Combat Novice"
+      "points": 30,
+      "title": "Combat Cadet"
     }
   ],
   "modeRankings": {
-    "Rocket Mace": [],
+    "Rocket Mace": [
+      {
+        "minecraftUsername": "F15_EAGL3",
+        "tiers": {
+          "Mace": "HT3",
+          "Rocket Mace": "LT2"
+        },
+        "peakTiers": {
+          "Mace": "HT3",
+          "Rocket Mace": "LT2"
+        },
+        "points": 30,
+        "title": "Combat Cadet"
+      }
+    ],
     "Spear Mace": [],
     "Diamond Pot": [],
     "Netherite Pot": [],
@@ -60,13 +76,15 @@
       {
         "minecraftUsername": "F15_EAGL3",
         "tiers": {
-          "Mace": "HT3"
+          "Mace": "HT3",
+          "Rocket Mace": "LT2"
         },
         "peakTiers": {
-          "Mace": "HT3"
+          "Mace": "HT3",
+          "Rocket Mace": "LT2"
         },
-        "points": 10,
-        "title": "Combat Novice"
+        "points": 30,
+        "title": "Combat Cadet"
       }
     ]
   },
